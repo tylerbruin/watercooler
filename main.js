@@ -8,6 +8,6 @@ document.addEventListener("DOMContentLoaded", function(){
         var waterLevel = Math.floor(Math.random() * 100) + 1 + '%'
         water.style.height = waterLevel; 
         console.log("water level", waterLevel);
-    }, 400);
+    }, 7000);
 
 });
