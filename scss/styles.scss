@@ -73,8 +73,7 @@ body {
                         animation: wave-movement 3s ease-in infinite;
                     }
                     
-                    .wave1 { animation-duration: 6.7s;
-                            bottom: 10px;}
+                    .wave1 { animation-duration: 6.7s;}
                     .wave2 { animation-duration: 2s;}
                     .wave3 { animation-duration: 3s;}
                     .wave4 {animation-duration: 4.5s;}
@@ -218,7 +217,7 @@ body {
 
             .opt {
                 min-width: 150px;
-                width: auto;
+                width: 45%;
                 padding: .5rem 1rem;
                 margin-right: .5rem;
                 min-height: 50px;
@@ -226,11 +225,18 @@ body {
                 border-radius: 10px;
                 margin-top: 10px;
                 color: #fff;
+                transition: all 1s;
+
+                &.wrong {
+                    opacity: 0.2;
+                    background-color: #F05A3F;
+                }
 
                 &.correct {
                     background-color: #00A481;
                     color: #fff;
                     transition: all 1s;
+                    opacity: 1;
                 }
             }
 

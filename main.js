@@ -56,13 +56,19 @@ document.addEventListener("DOMContentLoaded", function(){
                 console.log("optioon = ", options[t], num);
                 options[t].style.order = num;
             }
-            
+
             waterLevel(0);
 
             setTimeout(function(){
                 var correctOpt = document.querySelector("#yeet");
                 correctOpt.classList.add("correct");
                 waterLevel(100);
+
+                var options = document.querySelectorAll(".opt");
+                for (var t=0;t<options.length;t++){ 
+                    options[t].classList.add("wrong");                    
+                }
+                
             }, 20000)
 
             i++;
