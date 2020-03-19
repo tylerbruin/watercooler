@@ -184,14 +184,22 @@ body {
         height: 50%;
 
         .qTitle {
-            font-size: 30px;
+            font-size: 50px;
             line-height: 1.5;
-            max-width: 600px;
+            font-weight: 800px;
+            
             margin: 0 auto;
 
             &.sml {
                 font-size: 24px;
                 text-align: left;
+                font-weight: 400px;
+                text-align: center;
+
+                span {
+                    font-size: 24px;
+                    font-weight: 400px;
+                }
             }
 
             &:last-child {
@@ -199,8 +207,9 @@ body {
             }
 
             span {
-                font-size: 24px;
+                font-size: 75px;
                 margin-left: 1rem;
+                font-weight: 900;
             }
         }
 
