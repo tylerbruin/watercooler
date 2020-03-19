@@ -16,9 +16,14 @@ body {
     overflow: hidden;
 
     .sky {
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
         width: 100%;
-        height: 10%;
-        background-color: blue;
+        height: 6%;
+        background-color: #F05A3F;
+        color: #fff;
+        font-size: 24px;
     }
 
     .room {
@@ -27,6 +32,7 @@ body {
         background-color: transparent;
         width: 100%;
         height: 80%;
+        padding-top: 1rem;
         justify-content: center;
 
         .watercooler {
@@ -49,7 +55,7 @@ body {
                 width: 20%;
                 border-radius: 5px;
                 background-color: transparent;
-                border: 2px solid lightblue;
+                border: 2px solid #28A0C7;
 
                 .water-wave {
                     width: 100%;
@@ -60,7 +66,7 @@ body {
 
                     .wave1, .wave2, .wave3, .wave4, .wave5, .wave6, .wave7, .wave8, .wave9, .wave10, .wave11, .wave12, .wave13, .wave14, .wave15, .wave16, .wave17, .wave18, .wave19, .wave20 {
                         position: absolute;
-                        background-color: lightblue;
+                        background-color: #28A0C7;
                         height: 30px;
                         width: 30px;
                         border-radius: 20px;
@@ -90,19 +96,19 @@ body {
                     .wave20 {animation-duration: 6.1s;}
 
                     @keyframes wave-movement {
-                        from {left: 0px;}
+                        from {left: -10px;}
                         50% {left: 100%;}
-                        to {left: 0px;}
+                        to {left: -10px;}
                     }
 
                 }
 
                 .water {
                     // align-self: flex-end;
-                    background-color: lightblue;
-                    height: 50%;
+                    background-color: #28A0C7;
+                    height: 100%;
                     width: 100%;
-                    transition: height 10s;
+                    transition: height 20s;
                 }
             }
     
@@ -169,7 +175,7 @@ body {
     .floor {
         width: 100%;
         height: 10%;
-        background-color: #000;
+        background-color: #4C4C4C;
     }
 
 
@@ -184,13 +190,18 @@ body {
             max-width: 600px;
             margin: 0 auto;
 
+            &.sml {
+                font-size: 24px;
+                text-align: left;
+            }
+
             &:last-child {
                 margin-top: 1rem;
             }
 
             span {
                 font-size: 24px;
-                margin: 2rem;
+                margin-left: 1rem;
             }
         }
 
@@ -209,13 +220,15 @@ body {
                 min-width: 150px;
                 width: auto;
                 padding: .5rem;
+                margin-right: .5rem;
                 min-height: 50px;
-                background-color: lightblue;
+                background-color: #28A0C7;
                 border-radius: 10px;
                 margin-top: 10px;
+                color: #fff;
 
                 &.correct {
-                    background-color: green;
+                    background-color: #00A481;
                     color: #fff;
                     transition: all 1s;
                 }
