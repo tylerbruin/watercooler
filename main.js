@@ -1,15 +1,19 @@
 function ajaxRequest(e,t,n,a){let s=new XMLHttpRequest;s.open(e,t,!0),"POST"==e&&s.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),s.onreadystatechange=function(){if(4==s.readyState&&200==s.status){let e=s.responseText;a(e)}},s.send(n)}
 document.addEventListener("DOMContentLoaded", function(){
 
-    console.log("yeet");
-    // Quiz
+    
+    // Quiz API URL
     var quizURL = "https://opentdb.com/api.php?amount=50";
+
+    // Get API Data, handle response
     ajaxRequest("POST", quizURL, null, function(response){
+
         var data = JSON.parse(response);
         console.log("response", data);
         questions = data.results;
 
         var i = 0;
+
         setInterval(function(){
             console.log("New Question!");
 
@@ -66,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 var options = document.querySelectorAll(".opt");
                 for (var t=0;t<options.length;t++){ 
-                    options[t].classList.add("wrong");                    
+                    options[t].classList.add("wrong");          
                 }
                 
             }, 20000)
@@ -77,8 +81,11 @@ document.addEventListener("DOMContentLoaded", function(){
                 console.log("Limit reached!, restarting...");
                 location.reload();
             }
+            
         },40000);
+
     });
+
 });
 
 // Water Level
